@@ -1,0 +1,24 @@
+# Starter pipeline
+
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: |
+
+- task: PowerShell@2
+  inputs:
+    filePath: 'C:\Users\Tushar.patel\OneDrive - Covetrus\Documents\PowershellScripts to Run Exeuctionlist Remotely'
+    arguments: 'cd  C:\Users\Tushar.patel\Downloads\ToscaExecutionClient\ToscaExecutionClient   .\tosca_execution_client.ps1 -toscaServerUrl "https://azusea1-tostap1.covetrus.net" -projectName "CovetrusTechGroup1" -events ''["Sample"]'' -clientId "PNwiiGLackiViiNS5YtVrA" -clientSecret "vCqlYo1gu0SIeMxZr5dAdAtZQP1YgGtEWg9SKkAveaMg" -executionEnvironment "Dex"'
+
+
+  displayName: 'Run a one-line script'
+
+
