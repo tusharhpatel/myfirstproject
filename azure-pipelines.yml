@@ -10,10 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
+- script: |
+
+- task: PowerShell@2
+  inputs:
+    filePath: 'C:\Users\Tushar.patel\OneDrive - Covetrus\Documents\PowershellScripts to Run Exeuctionlist Remotely'
+    arguments: 'cd  C:\Users\Tushar.patel\Downloads\ToscaExecutionClient\ToscaExecutionClient   .\tosca_execution_client.ps1 -toscaServerUrl "https://azusea1-tostap1.covetrus.net" -projectName "CovetrusTechGroup1" -events ''["Sample"]'' -clientId "PNwiiGLackiViiNS5YtVrA" -clientSecret "vCqlYo1gu0SIeMxZr5dAdAtZQP1YgGtEWg9SKkAveaMg" -executionEnvironment "Dex"'
+
+
   displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
